@@ -1,0 +1,42 @@
+
+<html>
+<head>
+<style>
+body{font-family:Arial;background:#f8f9ff;padding:20px}
+.box{max-width:400px;margin:auto;background:#fff;padding:20px;border-radius:10px}
+.skill{margin:15px 0}
+.bar{height:12px;background:#e0e0e0;border-radius:6px;overflow:hidden}
+.fill{height:100%;width:0;background:#4a6cf7;border-radius:6px;transition:width 1s ease}
+</style>
+</head>
+<body>
+<div class="box">
+<h3></h3>
+
+<div class="skill">HTML <span>90%</span>
+<div class="bar"><div class="fill" data-w="90%"></div></div></div>
+
+<div class="skill">CSS <span>80%</span>
+<div class="bar"><div class="fill" data-w="80%"></div></div></div>
+
+<div class="skill">JavaScript <span>70%</span>
+<div class="bar"><div class="fill" data-w="70%"></div></div></div>
+
+<div class="skill">Python <span>60%</span>
+<div class="bar"><div class="fill" data-w="60%"></div></div></div>
+
+<div class="skill">ECE <span>85%</span>
+<div class="bar"><div class="fill" data-w="85%"></div></div></div>
+
+<p style="font-size:11px;color:gray"></p>
+</div>
+
+<script>
+window.onload=()=>{
+ document.querySelectorAll(".fill").forEach(b=>{
+  setTimeout(()=>b.style.width=b.dataset.w,200);
+ });
+}
+</script>
+</body>
+</html>
